@@ -1,0 +1,15 @@
+#contactPage {
+    min-height: calc(100vh -4rem);
+    width: 100vh;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.contactDesc {
+    padding: 1rem;
+}
