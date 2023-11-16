@@ -1,24 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './navbar.css';
-import contactImg from '../../assets/contact.png';
+// import contactImg from '../../assets/contact.png';
 import { Link } from 'react-scroll';
+import Contact from '../../assets/contact.png';
+import Menu from '../../assets/menu.png';
+
 const Navbar = () => {
-        return (
-            <nav className="navbar">
-                <img src="" alt="Logo" className="logo" />
-                    <div className="desktopMenu">
-                        <Link className="desktopListMenuItem">Home</Link>
-                        <Link className="desktopListMenuItem">About</Link>
-                        <Link className="desktopListMenuItem">Portfolio</Link>
-                        {/* <Link className="desktopListMenuItem">Clients</Link> */}
-                    </div>
-                    <button className="desktopMenuBtn" >
-                        <img src={ contactImg } alt="" className="desktopMenuImg" />
-                        Contact me
-                    </button>
-            
-            </nav>
-        )
+    const [showMenu, setShowMenu] = useState(false);
+    return (
+        <nav className="navbar">
+            <img src="" alt="Logo" className="logo" />
+                <div className="desktopMenu">
+                    <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className="desktopListMenuItem" >Home</Link>
+                    <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-70} duration={500} className="desktopListMenuItem" >About</Link>
+                    {/* <Link activeClass='active' to='portfolio' spy={true} smooth={true} offset={-100} duration={500} className="desktopListMenuItem" >Portfolio</Link> */}
+                </div>
+                <button className="desktopMenuBtn" onClick={() => {
+                    document.getElementById('contact').scrollIntoView({behavior: 'smooth'})
+                }} >
+                    <img src={ Contact } alt="" className="desktopMenuImg" />
+                    Contact me
+                </button>
+                <img src={ Menu } alt="menu" className="mobMenu" onClick={() => setShowMenu(!showMenu)}/>
+                <div className="navMenu" style={{display: showMenu ? 'flex' : 'none'}}>
+                    <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Home</Link>
+                    <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-70} duration={500} className="listItem" onClick={() => setShowMenu(false)}>About</Link>
+                    {/* <Link activeClass='active' to='portfolio' spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Portfolio</Link> */}
+                    <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Contact</Link>
+
+                </div>
+        </nav>
+    )
 }
 
 export default Navbar;
