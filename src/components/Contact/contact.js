@@ -27,12 +27,12 @@ const Contact = () => {
                 <form className="contactForm" ref={form} onSubmit={sendEmail}>
                     <input type="text" className="name" placeholder="Enter Your Name" name='from_name' maxLength={15}/>
                     <input type="email" className="email" placeholder="Enter Your Email" name='from_email' maxLength={35} />
-                    <textarea className="msg" name="message" rows="5" placeholder="Your Message"></textarea>
+                    <textarea className="msg" name="message" rows="5" placeholder="Your Message" ></textarea>
                     <button className="submitBtn" type="submit" value="send" >Submit</button>
                     <div className="links">
-                    <a href="https://in.linkedin.com/in/shamit30" target="_blank"><img src={LinkdInIcon} alt="instagram" className="link"/></a>
-                    <a href="https://www.instagram.com/shamit_dholakia" target="_blank"><img src={InstagramIcon} alt="linkdin" className="link" /></a>
-                    <a href="https://github.com/shamit30" target="_blank"><img src={GithubIcon} alt="github" className="link" /></a>
+                    <a href="https://in.linkedin.com/in/shamit30" target="_blank" className="linkOption"><img src={LinkdInIcon} alt="instagram" className="link"/><p>LinkedIn   </p></a>
+                    <a href="https://www.instagram.com/shamit_dholakia" target="_blank" className="linkOption"><img src={InstagramIcon} alt="linkdin" className="link" /><p>Instagram</p></a>
+                    <a href="https://github.com/shamit30" target="_blank" className="linkOption"><img src={GithubIcon} alt="github" className="link" /><p>GitHub</p></a>
                     </div>
                 </form>
             </div>

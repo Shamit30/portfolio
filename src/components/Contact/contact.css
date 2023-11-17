@@ -45,6 +45,10 @@
     background: rgb(40, 40, 40);
 }
 
+.msg{
+    resize: none
+}
+
 .submitBtn{
     background: #b1fb79;
     border: none;
@@ -64,6 +68,13 @@
     height: 3rem;
     width: 3rem;
     margin: 0 0.75rem;
+}
+
+.linkOption {
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    font-size: small;
 }
 
 .link:hover{

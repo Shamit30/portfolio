@@ -43,12 +43,16 @@
 .skillIcon {
     display: inline-grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 
 .skill-name {
     margin-top: 0.25rem;
+}
+
+.skillIconImg {
+    height: 5vh;
 }
 
 
@@ -59,8 +63,8 @@
         gap: 1rem;
     }
     .skillIconImg {
-        height: 10vh;
-        width: 14vw;
+        height: 5vh;
+        /* width: 14vw; */
     }
     
    
@@ -73,8 +77,8 @@
         gap: 1rem;
     }
     .skillIconImg {
-        height: 10vh;
-        width: 14vw;
+        height: 5vh;
+        /* width: 14vw; */
     }
     
 }

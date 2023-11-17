@@ -18,6 +18,7 @@ import gitIcon from '../../assets/git96.png';
 import githubIcon from '../../assets/github96.png';
 import gitlabIcon from '../../assets/gitlab96.png';
 import asanaIcon from '../../assets/asana.png';
+import TechBlock from "../TechBlock/techBlock";
 
 const Skills = () => {
 
@@ -52,6 +53,7 @@ const Skills = () => {
     return (
     <section id="skills">
         <span className="skillTitle">What I do</span>
+        <TechBlock />
         <span className="skillDesc">I am a Software Developer with expertise in Python, Node.js, React.js, AWS, Machine Learning. Committed to crafting innovative solutions. My passion lies in maintaining the highest coding standards while delivering user-centric applications. Let's build something amazing together!</span>
         <div className="skillIcons">
             <span className="skillIntro">I have gained confidence in utilizing the following technologies.</span>

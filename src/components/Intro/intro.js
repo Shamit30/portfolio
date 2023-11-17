@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './intro.css';
 import { Link } from 'react-scroll';
 import btnImg from '../../assets/hireme.png'
 
 
 const Intro = () => {
+    const [text, setText] = useState('Software Developer');
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+          setText((prevText) => (prevText === 'Software Developer' ? 'Self Learner' : 'Software Developer'));
+        }, 2000); 
+        
+        return () => clearInterval(intervalId);
+      }, []);
+
     return (
         <section id="intro">
             <div className="introContent">
@@ -13,13 +22,13 @@ const Intro = () => {
                         I'm
                         <span className="introName"> Shamit Dholakiya</span><br />
                     </span>
-                    
-                <p className="introPara">Software Developer</p>
-
+                <div className="introPara">{text}</div>
                 <p className="introDesc">I enjoy making code easy to understand and use, turning complex ideas into simple, effective solutions.</p>
-                <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-100} duration={500}><button className="btn"><img src={btnImg} alt="Hire Me" className="btnImg"/> Hire Me</button></Link>
+                <Link to='contact' spy={true} smooth={true} offset={-100} duration={500}><button className="btn"><img src={btnImg} alt="Hire Me" className="btnImg"/> Hire Me</button></Link>
             </div>
         </section>
+
+        
     )
 }
 
