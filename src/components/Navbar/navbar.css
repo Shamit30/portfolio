@@ -16,9 +16,7 @@
 
 .logo {
     object-fit: cover;
-    height: 3rem;
-    width: 4rem;
-
+    /* margin-top: 2rem; */
 }
 
 .desktopListMenuItem {

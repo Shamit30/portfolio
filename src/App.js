@@ -5,15 +5,12 @@ import Skills from './components/Skills/skills';
 import Contact from './components/Contact/contact';
 import Footer from './components/footer/footer';
 import Works from './components/Works/works';
-import TechBlock from './components/TechBlock/techBlock';
-
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Intro />
-      {/* <TechBlock /> */}
       <Skills />
       <Works />
       <Contact />

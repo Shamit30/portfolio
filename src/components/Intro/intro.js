@@ -17,9 +17,9 @@ const Intro = () => {
     return (
         <section id="intro">
             <div className="introContent">
-                    <span className="hello">Hello,</span>
+                    <span className="hello">Hey There!</span>
                     <span className="introText">
-                        I'm
+                        I am    
                         <span className="introName"> Shamit Dholakiya</span><br />
                     </span>
                 <div className="introPara">{text}</div>
