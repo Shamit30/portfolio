@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Navbar from "@/components/Navbar";
@@ -25,9 +25,9 @@ const AppWrapper = () => {
 
 const App = () => (
   <QueryClientProvider client={queryClient}>  
-      <BrowserRouter>
+      <HashRouter>
         <AppWrapper />
-      </BrowserRouter>
+      </HashRouter>
     
   </QueryClientProvider>
 );
