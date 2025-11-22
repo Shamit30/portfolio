@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-// import profilePic from "@/assets/profile-pic.jpg";
+import profilePic from "@/assets/profile-pic.png";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -26,7 +26,7 @@ const Navbar = () => {
           onClick={() => handleScroll("hero")}
         >
           <img
-            src={"profilePic"}
+            src={profilePic}
             alt="Shamit Dholakiya"
             className="h-10 w-10 rounded-full object-cover border-2 border-primary"
           />
@@ -49,7 +49,7 @@ const Navbar = () => {
             size="sm"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold flex items-center gap-2"
             onClick={() =>
-              window.open("https://your-resume-link.com", "_blank")
+              window.open("https://drive.google.com/file/d/1CTwLzASmFqsZQ-ewAJ3jWBoRKRg2PvaR/view?usp=sharing", "_blank")
             }
           >
             <Download className="h-4 w-4" />
